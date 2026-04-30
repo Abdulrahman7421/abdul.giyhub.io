@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: lightblue;
+            padding-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Welcome!</h1>
+    <p id="text">Click the button to change this text.</p>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("title").innerHTML = "You clicked the button!";
+            document.getElementById("text").innerHTML = "The page just changed 🎉";
+            document.body.style.backgroundColor = "lightgreen";
+        }
+    </script>
+
+</body>
+</html>
