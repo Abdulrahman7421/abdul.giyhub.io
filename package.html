@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holidae</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Holidae</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+          <li><a href="index.html#destinations">Destinations</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="close-nav" id="close-nav" aria-label="Close navigation">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#packages">Packages</a></li>
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="mobile-auth"><a href="#" class="btn btn-primary">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="index.html">Home</a> &rsaquo;
+      <a href="index.html#packages">Packages</a> &rsaquo;
+      <span>Maldives Paradise Escape</span>
+    </div>
+  </div>
+
+  <!-- ===== PACKAGE HERO ===== -->
+  <section class="pkg-hero">
+    <div class="container">
+      <div class="pkg-hero-inner">
+        <div class="pkg-hero-text">
+          <div class="pkg-badges">
+            <span class="badge badge-deal">40% OFF</span>
+            </div>
+          <h1>Maldives Paradise Escape</h1>
+          <div class="pkg-rating">
+            <span class="stars">★★★★★</span>
+            <strong>4.9/5</strong>
+            <span class="reviews-count">(1,284 reviews)</span>
+          </div>
+          <div class="pkg-quick-facts">
+            <div class="fact"><span class="fact-icon"></span><span>Flights from London Heathrow</span></div>
+            <div class="fact"><span class="fact-icon"></span><span>7 nights at 5-star resort</span></div>
+            <div class="fact"><span class="fact-icon"></span><span>All inclusive meals & drinks</span></div>
+            <div class="fact"><span class="fact-icon"></span><span>Airport transfers included</span></div>
+          </div>
+          <div class="pkg-price-block">
+            <div class="price-was">Was £2,499 pp</div>
+            <div class="price-hero">£1,499 <span>per person</span></div>
+            <div class="price-total">£2,998 total for 2 adults</div>
+          </div>
+          <button class="btn btn-primary btn-lg" onclick="scrollToBooking()">Book Now — Save £1,000</button>
+        </div>
+
+        <!-- Gallery -->
+        <div class="pkg-gallery">
+          <div class="gallery-main">
+            <img id="main-img"
+              src="images/mal1.png"
+              alt="Maldives main"
+            />
+          </div>
+          <div class="gallery-thumbs">
+            <img
+              src="images/mal1.png"
+              alt="Beach"
+              class="thumb active"
+              onclick="changeImage(this, 'images/mal1.png')"
+            />
+            <img
+              src="images/mal2.jpg"
+              alt="Bungalow"
+              class="thumb"
+              onclick="changeImage(this, 'images/mal2.jpg')"
+            />
+            <img
+              src="images/mal3.webp"
+              alt="Sea"
+              class="thumb"
+              onclick="changeImage(this, 'images/mal3.webp')"
+            />
+            <img
+              src="images/mal4.jpg"
+              alt="Food"
+              class="thumb"
+              onclick="changeImage(this, 'images/mal4.jpg')"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===== MAIN CONTENT + SIDEBAR ===== -->
+  <div class="container pkg-layout">
+
+    <!-- LEFT: Details -->
+    <main class="pkg-details">
+
+      <div class="pkg-tabs">
+        <button class="pkg-tab active" data-target="overview">Overview</button>
+      </div>
+
+      <div class="tab-panel active" id="overview">
+        <h2>About This Holiday</h2>
+        <p>Escape to the jewel of the Indian Ocean and experience pure paradise. This all-inclusive 7-night Maldives package includes return flights from London Heathrow, luxury overwater bungalow accommodation at the award-winning Holidae Collection resort, and unlimited food and drinks throughout your stay.</p>
+        <p>Wake up to turquoise lagoons from your private deck, snorkel through vibrant coral reefs, enjoy world-class spa treatments, and watch the most spectacular sunsets on Earth — all without worrying about the bill.</p>
+
+        <h3>Location</h3>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1627296.5461003688!2d73.18836!3d3.2028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1699000000000!5m2!1sen!2suk"
+            width="100%"
+            height="280"
+            style="border:0;border-radius:12px;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- RIGHT: Booking Sidebar -->
+    <aside class="booking-sidebar" id="booking-sidebar">
+      <div class="booking-card">
+        <div class="booking-price">
+          <span class="price-was">£2,499</span>
+          <span class="price-now">£1,499</span>
+          <span class="price-per">per person</span>
+        </div>
+
+        <form class="booking-form" onsubmit="handleBooking(event)">
+          <div class="form-group">
+            <label for="b-departure">Departure Date</label>
+            <input type="date" id="b-departure" required />
+          </div>
+          <div class="form-group">
+            <label for="b-adults">Adults</label>
+            <select id="b-adults">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-children">Children</label>
+            <select id="b-children">
+              <option value="0" selected>0 Children</option>
+              <option value="1">1 Child</option>
+              <option value="2">2 Children</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-room">Room Type</label>
+            <select id="b-room">
+              <option>Overwater Bungalow</option>
+              <option>Beach Bungalow</option>
+              <option>Lagoon Pool Villa</option>
+            </select>
+          </div>
+
+          <div class="price-summary">
+            <div class="ps-row"><span>2 adults × £1,499</span><span>£2,998</span></div>
+            <div class="ps-row"><span>Taxes & fees</span><span>Included</span></div>
+            <div class="ps-row ps-total"><span>Total</span><span>£2,998</span></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+        </form>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== RELATED PACKAGES ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>You Might Also Like</h2>
+      </div>
+      <div class="packages-grid packages-grid-3">
+        <article class="package-card">
+          <a href="package.html" class="card-link">
+            <div class="card-img-wrap">
+              <img src="images/popsan.jpg" alt="Santorini" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div class="card-location">Santorini, Greece</div>
+              <h3 class="card-title">Santorini Sunset Getaway</h3>
+              <div class="card-footer">
+                <div class="price-block">
+                  <span class="price-now">£1,049</span>
+                  <span class="price-per">per person</span>
+                </div>
+                <button class="btn btn-primary btn-sm">View Deal</button>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="package-card">
+          <a href="package.html" class="card-link">
+            <div class="card-img-wrap">
+              <img src="images/popdub.jpg" alt="Dubai" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div class="card-location">Dubai, UAE</div>
+              <h3 class="card-title">Dubai 5-Star Luxury Break</h3>
+              <div class="card-footer">
+                <div class="price-block">
+                  <span class="price-now">£2,099</span>
+                  <span class="price-per">per person</span>
+                </div>
+                <button class="btn btn-primary btn-sm">View Deal</button>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="package-card">
+          <a href="package.html" class="card-link">
+            <div class="card-img-wrap">
+              <img src="images/popbal.jpg" alt="Bali" loading="lazy" />
+            </div>
+            <div class="card-body">
+              <div class="card-location">Bali, Indonesia</div>
+              <h3 class="card-title">Bali Adventure Explorer</h3>
+              <div class="card-footer">
+                <div class="price-block">
+                  <span class="price-now">£1,299</span>
+                  <span class="price-per">per person</span>
+                </div>
+                <button class="btn btn-primary btn-sm">View Deal</button>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+   <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light"><span class="hol">Holidae</span></a>
+        <p>Making holiday dreams a reality since 2010. Trusted by over 500,000 travellers worldwide.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Mobile Sticky Book Bar -->
+  <div class="mobile-book-bar">
+    <div class="mbb-price">
+      <span class="mbb-was">£2,499</span>
+      <span class="mbb-now">£1,499 pp</span>
+    </div>
+    <button class="btn btn-primary" onclick="scrollToBooking()">Book Now</button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/package.js"></script>
+</body>
+</html>

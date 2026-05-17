@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holidae</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Holidae</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+          <li><a href="index.html#destinations">Destinations</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="close-nav" id="close-nav" aria-label="Close navigation">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#packages">Packages</a></li>
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="mobile-auth"><a href="signin.html" class="btn btn-outline">Sign In</a></li>
+      <li class="mobile-auth"><a href="register.html" class="btn btn-primary">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== REGISTRATION FORM ===== -->
+  <div class="auth-page">
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        <a href="index.html" class="logo">Holidae</a>
+      </div>
+      <h1>Create Your Account</h1>
+      <p class="auth-subtitle">Join 500,000+ travellers and unlock exclusive deals.</p>
+
+      <!-- Registration Form -->
+      <form class="auth-form" id="register-form" onsubmit="handleRegister(event)" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Jane" autocomplete="given-name" />
+            <div class="field-error" id="err-first">Please enter your first name.</div>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Smith" autocomplete="family-name" />
+            <div class="field-error" id="err-last">Please enter your last name.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jane@example.com" autocomplete="email" />
+          <div class="field-error" id="err-email">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" autocomplete="bday" />
+          <div class="field-error" id="err-dob">Please enter your date of birth.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" placeholder="Create a strong password" autocomplete="new-password" />
+            <button type="button" class="toggle-pw" onclick="togglePassword('password', this)" aria-label="Show password">👁</button>
+          </div>
+          <div class="field-error" id="err-password">Password must be at least 8 characters.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="newsletter-pref">Email Preferences</label>
+          <select id="newsletter-pref">
+            <option value="all">Send me all deals and offers</option>
+            <option value="weekly">Weekly deals digest only</option>
+            <option value="none">No marketing emails</option>
+          </select>
+        </div>
+
+        <label class="terms-check">
+          <input type="checkbox" id="terms" />
+          I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+        </label>
+        <div class="field-error" id="err-terms">You must agree to the terms to continue.</div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Create My Account</button>
+
+        <div class="divider">or</div>
+
+      </form>
+
+      <!-- Success Message (shown after form submit) -->
+      <div class="success-message" id="success-msg">
+        <h2>Welcome to Holidae!</h2>
+        <p>Your account has been created. We've sent a confirmation email — please check your inbox.</p>
+        <a href="index.html" class="btn btn-primary btn-block">Start Browsing Holidays</a>
+      </div>
+
+      <div class="auth-footer">
+        Already have an account? <a href="signin.html">Sign in here</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/register.js"></script>
+
+</body>
+</html>

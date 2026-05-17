@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holidae</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Holidae</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+          <li><a href="index.html#destinations">Destinations</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <button class="close-nav" id="close-nav" aria-label="Close navigation">&times;</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#packages">Packages</a></li>
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="mobile-auth"><a href="signin.html" class="btn btn-outline">Sign In</a></li>
+      <li class="mobile-auth"><a href="register.html" class="btn btn-primary">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== SIGN IN FORM ===== -->
+  <div class="auth-page">
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        <a href="index.html" class="logo">Holidae</a>
+      </div>
+      <h1>Welcome Back</h1>
+      <p class="auth-subtitle">Sign in to access your bookings and exclusive deals.</p>
+
+      <form class="auth-form" id="signin-form" onsubmit="handleSignin(event)" novalidate>
+
+        <div class="form-group">
+          <label for="si-email">Email Address</label>
+          <input type="email" id="si-email" placeholder="jane@example.com" autocomplete="email" />
+          <div class="field-error" id="err-si-email">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="si-password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="si-password" placeholder="Your password" autocomplete="current-password" />
+            <button type="button" class="toggle-pw" onclick="togglePassword('si-password', this)" aria-label="Show password">👁</button>
+          </div>
+          <div class="field-error" id="err-si-password">Please enter your password.</div>
+        </div>
+
+        <div class="forgot-link">
+          <a href="#">Forgot your password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+
+      </form>
+
+      <div class="success-message" id="si-success">
+        <h2>Signed In!</h2>
+        <p>Welcome back. Redirecting you to your dashboard...</p>
+        <a href="index.html" class="btn btn-primary btn-block">Go to Homepage</a>
+      </div>
+
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html">Register for free</a>
+      </div>
+
+    </div>
+  </div>
+
+    <script src="js/signin.js"></script>
+
+</body>
+</html>

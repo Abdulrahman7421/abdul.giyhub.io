@@ -1,1 +1,0 @@
-# abdul.giyhub.io
